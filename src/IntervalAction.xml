@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.intervalaction.IntervalAction" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Interval Action</name>
+    <description>Call a Mendix action based on an interval. Automatically remove the interval when the page is unloaded.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="interval" type="expression" required="true">
+                <caption>Interval</caption>
+                <description>Number of milliseconds between action executions</description>
+                <returnType type="Integer" />
+            </property>
+            <property key="action" type="action" required="true">
+                <caption>Action</caption>
+                <description>Mendix action executed every {Interval} milliseconds. Nanoflow recommended</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
