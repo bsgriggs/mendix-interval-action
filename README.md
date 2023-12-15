@@ -1,13 +1,15 @@
 ## Interval Action
 
-Call a Mendix action based on an interval. Automatically remove the interval when the page is unloaded.
+Call a Mendix action based on an interval/periodically. Automatically removes the interval when the page is unloaded.
 
 ![demo](https://github.com/bsgriggs/mendix-interval-action/blob/media/Demo.png)
 
 ## Features
 
+-   Run an action periodically
 -   Number of milliseconds can be dynamic
 -   Debug mode to log when the action is executed to the browser console
+-   Automatically removes the interval when the page is unloaded
 
 ## Usage
 
@@ -15,6 +17,7 @@ Call a Mendix action based on an interval. Automatically remove the interval whe
 
 1.  Add the widget to a page in Studio Pro
 2.  Set the Interval expression to the number of milliseconds between each execution
+3.  Set the action as a Microflow or Nanoflow that you need to run periodically
 
 ## Demo project
 
