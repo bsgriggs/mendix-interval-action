@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="mendix.intervalaction.IntervalAction" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="mendix.intervalaction.IntervalAction" pluginWidget="true" needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Interval Action</name>
     <description>Call a Mendix action based on an interval. Automatically remove the interval when the page is unloaded.</description>
-    <icon/>
+    <helpUrl>https://github.com/bsgriggs/mendix-interval-action/blob/master/README.md</helpUrl>
+    <icon />
     <properties>
         <propertyGroup caption="General">
-            <property key="interval" type="expression" required="true">
-                <caption>Interval</caption>
-                <description>Number of milliseconds between action executions</description>
-                <returnType type="Integer" />
-            </property>
-            <property key="action" type="action" required="true">
-                <caption>Action</caption>
-                <description>Mendix action executed every {Interval} milliseconds. Nanoflow recommended</description>
-            </property>
+            <propertyGroup caption="Settings">
+                <property key="interval" type="expression" required="true">
+                    <caption>Interval</caption>
+                    <description>Number of milliseconds between action executions</description>
+                    <returnType type="Integer" />
+                </property>
+                <property key="debugMode" type="boolean" required="true" defaultValue="false">
+                    <caption>Debug mode</caption>
+                    <description>Logs when each action is executed to the browser console</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Action">
+                <property key="action" type="action" required="true">
+                    <caption>Action</caption>
+                    <description>Mendix action executed every {Interval} milliseconds</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Common">
+            <propertyGroup caption="Common">
+                <systemProperty key="Name" />
+                <systemProperty key="TabIndex" />
+            </propertyGroup>
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility" />
+            </propertyGroup>
+            <!-- <propertyGroup caption="Editbility">
+                <systemProperty key="Editability" />
+            </propertyGroup> -->
         </propertyGroup>
     </properties>
 </widget>

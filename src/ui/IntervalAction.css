@@ -1,6 +1,3 @@
-/*
-Place your custom CSS here
-*/
-.widget-hello-world {
-
+.mendix-interval-action:not(.debug) {
+    visibility: hidden;
 }
