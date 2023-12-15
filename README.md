@@ -2,12 +2,16 @@
 
 Call a Mendix action based on an interval. Automatically remove the interval when the page is unloaded.
 
+![demo](https://github.com/bsgriggs/mendix-interval-action/blob/media/Demo.png)
+
 ## Features
 
 -   Number of milliseconds can be dynamic
 -   Debug mode to log when the action is executed to the browser console
 
 ## Usage
+
+![general](https://github.com/bsgriggs/mendix-interval-action/blob/media/General.png)
 
 1.  Add the widget to a page in Studio Pro
 2.  Set the Interval expression to the number of milliseconds between each execution
